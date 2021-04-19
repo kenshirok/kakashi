@@ -24,7 +24,7 @@ class User < ApplicationRecord
 
          has_many :articles, dependent: :destroy
 
-         def has_written(article)
+         def has_written?(article)
           articles.exists?(id: article.id)
          end
 
